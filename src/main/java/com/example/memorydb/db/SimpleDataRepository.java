@@ -41,7 +41,7 @@ abstract public class SimpleDataRepository<T extends Entity, ID extends Long> im
 
         if(prevData.isPresent()){
             //기존 데이터가 있는 경우 업데이트
-            dataList.remove(prevData);
+            dataList.remove(prevData.get()); //prevData는 Optional 타입이므로 get으로 반환해야함.
             dataList.add(data);
         } else {
             //없는 경우 create
@@ -77,9 +77,9 @@ abstract public class SimpleDataRepository<T extends Entity, ID extends Long> im
                 .filter(it -> {
                     return (it.getId().equals(id));
                 })
-                .findFirst();
+                .findFirst(); //findFirst의 반환 타입이 Optional이기 때문.
         if(deleteEntity.isPresent()) {
-            dataList.remove(deleteEntity);
+            dataList.remove(deleteEntity.get());//deleteEntity도 마찬가지임.
         }
     }
 }
