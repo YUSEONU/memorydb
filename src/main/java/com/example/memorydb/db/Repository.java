@@ -1,5 +1,5 @@
 package com.example.memorydb.db;
 
-public interface Repository {
+public interface Repository<T, ID> {
 
 }
