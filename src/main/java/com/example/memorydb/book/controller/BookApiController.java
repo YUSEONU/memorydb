@@ -28,6 +28,7 @@ public class BookApiController {
         return bookService.create(bookEntity);
     }
 
+    //book 엔티티 전체 찾기
     @GetMapping("/all")
     public List<BookEntity> findAll(){
         return bookService.findAll();
@@ -40,6 +41,7 @@ public class BookApiController {
         bookService.delete(id);
     }
 
+    //book 엔티티 개별 찾기
     @GetMapping("/id/{id}")
     public BookEntity findOne(
             @PathVariable Long id
