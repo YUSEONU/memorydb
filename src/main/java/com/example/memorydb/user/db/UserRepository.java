@@ -1,24 +1,11 @@
 package com.example.memorydb.user.db;
 
 
-import com.example.memorydb.db.SimpleDataRepository;
 import com.example.memorydb.user.model.UserEntity;
-import java.util.List;
-import java.util.stream.Collectors;
-import org.springframework.stereotype.Service;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Service
-public class UserRepository extends SimpleDataRepository<UserEntity, Long> {
 
-    public List<UserEntity> findAllScoreGreaterThan(int score) {
 
-        return this.findAll()
-                .stream()
-                .filter(
-                        it-> {
-                            return it.getScore() > score;
-                        }
-                )
-                .collect(Collectors.toList());
-    }
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
+
 }
