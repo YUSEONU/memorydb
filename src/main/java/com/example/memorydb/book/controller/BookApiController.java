@@ -38,7 +38,7 @@ public class BookApiController {
     public void delete(
             @PathVariable Long id
     ){
-        bookService.delete(id);
+        //bookService.delete(id);
     }
 
     //book 엔티티 개별 찾기

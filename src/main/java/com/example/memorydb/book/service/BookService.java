@@ -30,7 +30,7 @@ public class BookService {
     }
 
     //delete
-    public void delete(Long id) {bookRepository.delete(id);}
+    public void delete(BookEntity id) {bookRepository.delete(id);}
 
     //one
     public Optional<BookEntity> findById(Long id) {
