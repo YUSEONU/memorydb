@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity(name = "book")
+@Entity(name = "book") //book 엔티티와 매칭 시켜줌.
 public class BookEntity {
 
     @Id

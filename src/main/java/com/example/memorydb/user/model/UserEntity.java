@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity(name = "user")
+@Entity(name = "user") // user 엔티티와 매칭 시켜줌.
 public class UserEntity{
 
     @Id
